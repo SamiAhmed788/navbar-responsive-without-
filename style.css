@@ -1,6 +1,17 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(242, 247, 248);
+}
+
 .navbar{
     display: flex;
     justify-content: space-between;
+
 }
 .navbar2 ul{
     display: flex;
@@ -17,4 +28,19 @@
 }
 #navbar3 li{
 margin-right: 20px;
+}
+#allitem{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    align-items: center;
+    box-shadow: 0 10px 10px 0 rgb(198, 203, 211);
+}
+span{
+ color: rgb(40, 146, 245);
+}
+#navbar3{
+    color: rgb(40, 146, 245);
 }

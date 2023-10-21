@@ -1,27 +1,25 @@
-const navlist = document.getElementById('navlist')
-const checkro = document.getElementById('checkro')
-const icons = document.querySelectorAll('icons')
-console.log(icons); 
-const bar = document.getElementById("feature")
-
-let chk = false
+const list = document.getElementById('navlist')
+const icons = document.querySelectorAll('#icons')
+const feature = document.getElementById('feature')
+const chkit = document.getElementById('checkro')
 
 
-function myCall() {
-    const balanceinwidth = window.innerWidth;
-if (balanceinwidth <= 760) {
-    navlist.style.display = "none"
-    bar.style.display = "block"
-    icons.forEach(function(val){
-val.style.display= "flex"
-chk = true
-    )}
-    
-else{
-    bar.style.display = "none"
-    navlist.style.display = "flex"
-    icons.forEach(function(val){
-        val.style.display = "flex"
+function mycall() {
+    let screenwith = window.innerWidth;
+    if (screenwith < 750 ) {
+        list.style.display= 'none'
+        feature.style.display = 'flex'
+        let hukid =[...icons]
+        hukid.forEach(function(mera) {
+            mera.style.display= 'none'
+
+            
+        })
+    }else{
+        list.style.display ='flex'
+        feature.style.display= 'none'
+        icons.forEach(function(mera) {
+            mera.style.display= 'flex'
     })
-
-}
+}}
+window.addEventListener( 'resize',mycall)
